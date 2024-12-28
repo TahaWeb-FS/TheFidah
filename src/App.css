@@ -1,0 +1,11 @@
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-[#060407] font-semibold bg-cover bg-no-repeat bg-center text-zinc-50  overflow-x-hidden
+}
+
+/* [url('../images/bg-2.jpg')] */
