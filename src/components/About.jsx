@@ -1,19 +1,31 @@
-import React from 'react'
-
+import React from 'react';
 
 function About() {
-    return ( 
-        <div className='bg-[url("../images/about-bg.png")] bg-cover bg-no-repeat text-5xl my-10 font-bold text-center h-[400px]'>
-            <h1>About Me</h1>
-            <div className="container mt-36 flex justify-center items-center">
-                <div className="image">
-                    <img src="../images/me-cropped.png" className="w-[500px] " />
+    return (
+        <div className='bg-[url("../images/about-bg.png")] bg-cover md:bg-contain bg-center bg-no-repeat text-center text-3xl md:text-5xl font-bold'>
+            <div className="container mt-0 px-4 sm:px-6 lg:px-12 mx-auto h-auto flex flex-wrap justify-center items-center gap-4 sm:gap-12 lg:gap-24">
+                <div className="image w-[200px] sm:w-[300px] md:w-auto">
+                    <img
+                        src="../images/me-cropped.png"
+                        className="h-auto object-cover mt-14 w-[400px]"
+                        alt="Profile"
+                    />
                 </div>
-                
+                <div className="about-text p-4 sm:p-8 md:p-16">
+                    <h3 className='text-center sm:text-left text-xl sm:text-2xl text-[#F61907] font-bold'>My Intro</h3>
+                    <h3 className='text-center sm:text-left text-2xl sm:text-4xl font-bold mt-3'>About Me</h3>
+                    <p className='text-sm font-medium text-justify mt-4 md:w-[470px] w-full'>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus minima magnam reiciendis error facilis ut molestias illum. Facilis ipsa dolorum expedita officia accusamus accusantium, consequatur neque ratione alias sint.
+                    </p>
+                    <div className="about-description text-justify mt-4">
+                        <p className='text-sm leading-8'><i className="fa-solid fa-user text-sm"></i> <span className='ml-2'>Name </span><span className='md:ml-24'>:</span> <span className='ml-4'>Mohamed Taha Lamkhizni</span></p>
+                        <p className='text-sm leading-8'><i className="fa-solid fa-phone text-sm"></i> <span className='ml-2'>Phone</span> <span className='md:ml-[5.75rem]'>:</span> <span className='ml-4'>06 93 09 48 65</span></p>
+                        <p className='text-sm leading-8'><i className="fa-solid fa-envelope text-sm"></i> <span className='ml-2'>Email</span> <span className='md:ml-24'>:</span> <span className='ml-4'>tahalam.dev@gmail.com</span></p>
+                    </div>
+                </div>
             </div>
         </div>
-        
-     );
+    );
 }
 
 export default About;
