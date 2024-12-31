@@ -8,4 +8,20 @@ body {
     @apply bg-[#060407] font-semibold bg-cover bg-no-repeat bg-center text-zinc-50  overflow-x-hidden w-full h-screen
 }
 
+.box {
+    
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 10%;
+    color: #f4000A;
+    background-color: #f4000A;
+    bottom: -20px;
+    left: 45.5%;
+    border-radius: 20px;
+}
+
 /* [url('../images/bg-2.jpg')] */
