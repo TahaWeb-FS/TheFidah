@@ -44,7 +44,7 @@ const Hero = () => {
           
           
         </div>
-        <div className="div flex items-center">
+        <div className="hidden md:flex items-center">
           <Lottie animationData={Animation} loop={true} className="w-[300px] h-[300px] mt-8 lg:w-[400px] lg:h-[400px] mx-[8%]" />
         </div>
       </div>

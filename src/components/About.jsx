@@ -7,13 +7,12 @@ function About() {
                 <div className="image w-[200px] sm:w-[300px] md:w-auto">
                     <img
                         src="../images/me-cropped.png"
-                        className="h-auto object-cover mt-14 w-[400px]"
+                        className="h-auto object-cover mt-14 w-[300px]"
                         alt="Profile"
                     />
                 </div>
                 <div className="about-text p-4 sm:p-8 md:p-16">
-                    <h3 className='text-center sm:text-left text-xl sm:text-2xl text-[#F61907] font-bold'>My Intro</h3>
-                    <h3 className='text-center sm:text-left text-2xl sm:text-4xl font-bold mt-3'>About Me</h3>
+                    <h3 className='text-center sm:text-left text-4xl sm:text-4xl font-bold mt-3'>About Me</h3>
                     <p className='text-sm font-medium text-justify mt-4 md:w-[470px] w-full'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus minima magnam reiciendis error facilis ut molestias illum. Facilis ipsa dolorum expedita officia accusamus accusantium, consequatur neque ratione alias sint.
                     </p>
