@@ -2,8 +2,8 @@ import React from 'react';
 
 function About() {
     return (
-        <div className='bg-[url("../images/about-bg.png")] bg-cover md:bg-contain bg-center bg-no-repeat text-center text-3xl md:text-5xl font-bold'>
-            <div className="container mt-0 px-4 sm:px-6 lg:px-12 mx-auto h-auto flex flex-wrap justify-center items-center gap-4 sm:gap-12 lg:gap-24">
+        <div className='text-center pt-12 text-3xl md:text-5xl font-bold'>
+            <div className="container px-4 sm:px-6 lg:px-12 lg:my-16 mx-auto h-auto flex flex-wrap justify-center items-center gap-4 sm:gap-12 lg:gap-24">
                 <div className="image w-[200px] sm:w-[300px] md:w-auto">
                     <img
                         src="../images/me-cropped.png"
