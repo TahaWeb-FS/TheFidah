@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <div className='w-full'>
-      <div className="parent flex lg:flex-row flex-col-reverse text-black ">
+      <div className="parent flex lg:flex-row lg:items-center flex-col-reverse text-black ">
         <div className="container px-[8%] flex flex-col my-[-5%] lg:my-[8%] relative lg:w-[62%] w-full">
           <h1 className='text-[40px] lg:text-[55px] font-bold'>Hi, I'm <span className='text-[#0DB760]'>Taha </span></h1>
           <h2 className='text-[39px] font-bold leading-[50px] lg:text-[55px]'>a <span className='text-[#0DB760]'>Full Stack Developer</span></h2>
@@ -47,6 +47,11 @@ const Hero = () => {
         </div>
         <div className="">
           <Lottie animationData={Animation} loop={true} className="w-[350px] h-[350px] lg:mt-8 lg:w-[500px] lg:h-[500px] lg:mx-[-10%]" />
+          {/* <img
+                        src="../images/cropped_image.png"
+                        className="h-auto object-cover mt-14 w-[370px]"
+                        alt="Profile"
+          /> */}
         </div>
       </div>
         

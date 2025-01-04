@@ -10,9 +10,9 @@ export default function App() {
     <>
       <Navbar />
       <Hero />
+      <Skills />
       <About />
       <Services />
-      <Skills />
     </>
   )
 }

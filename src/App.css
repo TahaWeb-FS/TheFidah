@@ -10,6 +10,15 @@ body {
     @apply text-black font-semibold bg-cover bg-no-repeat bg-center overflow-x-hidden w-full h-screen
 }
 
+.box {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.icon {
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+}
+
 
 .title::after {
     content: '';
@@ -18,7 +27,7 @@ body {
     width: 10%;
     color: #f4000A;
     background-color: #f4000A;
-    bottom: -20px;
+    bottom: -65px;
     left: 45.5%;
     border-radius: 20px;
 }

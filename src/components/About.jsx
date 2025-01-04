@@ -6,7 +6,7 @@ function About() {
             <div className="container px-4 sm:px-6 lg:px-12 lg:my-16 mx-auto h-auto flex flex-wrap justify-center items-center gap-4 sm:gap-12 lg:gap-24">
                 <div className="image w-[200px] sm:w-[300px] md:w-auto">
                     <img
-                        src="../images/me-cropped.png"
+                        src="../images/cropped_image.png"
                         className="h-auto object-cover mt-14 w-[300px]"
                         alt="Profile"
                     />
