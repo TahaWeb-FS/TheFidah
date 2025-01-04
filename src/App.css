@@ -12,6 +12,25 @@ body {
 
 .box {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.3s all;
+    text-align: center;
+}
+
+
+.box:hover {
+    background-color: #0DB760;
+}
+
+.box:hover .fa {
+    color: white;
+}
+
+.box:hover h3 {
+    color: white;
+}
+
+.box:hover h2 {
+    color: white;
 }
 
 .icon {
@@ -20,14 +39,14 @@ body {
 }
 
 
-.title::after {
+.services-title::after {
     content: '';
     position: absolute;
     height: 4px;
     width: 10%;
-    color: #f4000A;
-    background-color: #f4000A;
-    bottom: -65px;
+    color: #0DB760;
+    background-color: #0DB760;
+    bottom: -95px;
     left: 45.5%;
     border-radius: 20px;
 }
