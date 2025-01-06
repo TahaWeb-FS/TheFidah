@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="container px-[8%] flex flex-col my-[-5%] lg:my-[8%] relative lg:w-[62%] w-full">
           <h1 className='text-[40px] lg:text-[55px] font-bold'>Hi, I'm <span className='text-[#0DB760]'>Taha </span></h1>
           <h2 className='text-[39px] font-bold leading-[50px] lg:text-[55px]'>a <span className='text-[#0DB760]'>Full Stack Developer</span></h2>
-          <p className='font-medium py-7'>Lorem ipsum dolor sit amet consectetur adipisicing elit. nemo illo atque <br /> odit eligendi vitae ut dolores quas eopo fugiat deleniti sunt at poruit lokijn. <br /> Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <p className='font-medium py-7 max-w-[600px]'>I’m a passionate full-stack developer dedicated to crafting digital experiences. From intuitive front-end designs to robust back-end systems, I deliver scalable and efficient solutions tailored to your needs. Let’s bring your ideas to life!</p>
           <div className="buttons py-4">
             <button className="cursor-pointer group relative flex gap-1.5 px-6 py-3 bg-[#0DB760] bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition font-semibold shadow-md w-fit">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24px" width="24px">
@@ -46,7 +46,7 @@ const Hero = () => {
           
         </div>
         <div className="">
-          <Lottie animationData={Animation} loop={true} className="w-[350px] h-[350px] lg:mt-8 lg:w-[500px] lg:h-[500px] lg:mx-[-10%]" />
+          <Lottie animationData={Animation} loop={true} className="w-[350px] h-[350px] mx-[8%] lg:mt-8 lg:w-[500px] lg:h-[500px] lg:mx-[-10%]" />
           {/* <img
                         src="../images/cropped_image.png"
                         className="h-auto object-cover mt-14 w-[370px]"

@@ -12,7 +12,7 @@ function Services() {
         <div className="parent w-full">
             <div className="container mt-[50%] md:mt-[12%] md:mx-[8%]">
             <h1 className='text-2xl text-[#0DB760] font-bold text-center'> Services</h1>
-            <h1 className='md:text-5xl text-4xl font-bold text-center services-title'> What I Am Great At</h1>
+            <h1 className='md:text-5xl text-4xl font-bold text-center services-title relative'> What I Am Great At</h1>
             <div className="box-container grid grid-cols-1 md:grid-cols-3 gap-8 mt-[12%] mx-[5%] md:mx-[8%] md:mt-[8%] ">
                 <div className="box pt-[35px] pb-[50px] px-[30px] rounded-md text-left ">
                     <div className="icon">
