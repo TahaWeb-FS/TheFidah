@@ -16,7 +16,7 @@ function About() {
                 <div className="about-text p-4 sm:p-8 md:p-16">
                     <h3 className='text-center sm:text-left text-4xl sm:text-4xl font-bold mt-3'>About Me</h3>
                     <p className='text-sm font-medium text-justify mt-4 md:w-[470px] w-full'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus minima magnam reiciendis error facilis ut molestias illum. Facilis ipsa dolorum expedita officia accusamus accusantium, consequatur neque ratione alias sint.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptatibus minima magnamo reiciendis error facilis ut molestias illum. Facilis ipsa dolorum expedita officia accusamus accusantium, consequatur neque ratione alias sint.
                     </p>
                     <div className="about-description text-justify mt-4">
                         <p className='text-sm leading-8'><i className="fa-solid fa-user text-sm"></i> <span className='ml-2'>Name </span><span className='md:ml-24'>:</span> <span className='ml-4'>Mohamed Taha Lamkhizni</span></p>
