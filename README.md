@@ -1,8 +1,26 @@
-# React + Vite
+Web Developer Portfolio 🌐
+Hi! I'm Mohamed Taha Lamkhizni, a passionate Web Developer. This portfolio showcases my skills and projects, focusing on dynamic, responsive web applications. 🌟
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview 🌍
+This portfolio is built with modern web technologies. Explore my work and feel free to reach out for any collaborations or questions.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technologies I Use 🛠️
+React.js ⚛️ (for interactive UIs)
+HTML, CSS, JavaScript 🌐
+Tailwind CSS 🖌️ (for utility-first design)
+Lottie Animations 🎞️ (for sleek animations)
+Framer Motion 🖼️ (for smooth transitions)
+Git & GitHub 🐙 (for version control)
+Setup 💻
+Navigate to the project folder:
+bash
+Copy
+Edit
+cd portfolio  
+Install dependencies:
+bash
+Copy
+Edit
+npm install  
+My Approach 💡
+I focus on building clean, maintainable, and scalable web applications. I take a user-centered approach to design and development, ensuring that my projects are intuitive and accessible.
