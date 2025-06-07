@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "home" : "https://tahaweb-fs.github.io/Portfolio/",
+  "home": "https://tahaweb-fs.github.io/Portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,14 +12,22 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "framer-motion": "^11.18.0",
     "lottie-react": "^2.4.0",
+    "lucide-react": "^0.511.0",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.5.1",
     "react-icons": "^5.4.0",
+    "react-router-dom": "^7.6.2",
+    "react-scroll": "^1.9.0",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
@@ -32,6 +40,7 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "gh-pages": "^6.3.0",
     "globals": "^15.12.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",

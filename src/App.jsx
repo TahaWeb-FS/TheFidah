@@ -1,16 +1,24 @@
-import './App.css'
-import About from './components/About'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import Services from './components/Services'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './layouts/Navbar';
+import Footer from './layouts/Footer';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import './styles/animations.css';
 
-export default function App() {
+const App = () => {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Services />
-      <About />
-    </>
-  )
-}
+    <Router>
+      <div className="min-h-screen ">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App;

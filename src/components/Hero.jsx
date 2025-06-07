@@ -1,61 +1,420 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedinIn, faInstagram, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
-import Lottie from 'lottie-react';
-import Animation from './Animation-Green.json'
-import './hero.css'
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Star } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroImages = [
+    "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=1920&h=1080&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1920&h=1080&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=1920&h=1080&fit=crop&q=80",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const stats = [
+    { value: '15K+', label: 'Happy Clients' },
+    { value: '500+', label: 'Unique Pieces' },
+    { value: '25+', label: 'Years Crafting' }
+  ];
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 60,
+      filter: "blur(10px)"
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.8,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }
+    }
+  };
+
+  const titleVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 100,
+      scale: 0.8
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }
+    }
+  };
+
+  const subtitleVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      x: -20
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        duration: 1,
+        delay: 0.3,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }
+    }
+  };
+
+  const buttonVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 30,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    },
+    hover: {
+      scale: 1.05,
+      y: -2,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut"
+      }
+    },
+    tap: {
+      scale: 0.98
+    }
+  };
+
+  const statsVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.5
+      }
+    }
+  };
+
+  const statItemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 20,
+      scale: 0.8
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const imageVariants = {
+    enter: {
+      opacity: 0,
+      scale: 1.1,
+      filter: "blur(10px)"
+    },
+    center: {
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)",
+      transition: {
+        duration: 1.5,
+        ease: [0.6, -0.05, 0.01, 0.99]
+      }
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.9,
+      filter: "blur(5px)",
+      transition: {
+        duration: 1,
+        ease: "easeInOut"
+      }
+    }
+  };
 
   return (
-    <div className='w-full'>
-      <div className="parent flex lg:flex-row lg:items-center flex-col-reverse text-black ">
-        <div className="container px-[8%] flex flex-col my-[-5%] lg:my-[8%] relative lg:w-[62%] w-full">
-          <h1 className='text-[40px] lg:text-[55px] font-bold'>Hi, I'm <span className='text-[#0DB760]'>Taha </span></h1>
-          <h2 className='text-[39px] font-bold leading-[50px] lg:text-[55px]'>a <span className='text-[#0DB760]'>Full Stack Developer</span></h2>
-          <p className='font-medium py-7 max-w-[600px]'>I’m a passionate full-stack developer dedicated to crafting digital experiences. From intuitive front-end designs to robust back-end systems, I deliver scalable and efficient solutions tailored to your needs. Let’s bring your ideas to life!</p>
-          <div className="buttons py-4">
-            <button className="cursor-pointer group relative flex gap-1.5 px-6 py-3 bg-[#0DB760] bg-opacity-80 text-[#f1f1f1] rounded-3xl hover:bg-opacity-70 transition font-semibold shadow-md w-fit">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24px" width="24px">
-                <g strokeWidth="0" id="SVGRepo_bgCarrier"></g>
-                <g strokeLinejoin="round" strokeLinecap="round" id="SVGRepo_tracerCarrier"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <g id="Interface / Download">
-                    <path
-                      strokeLinejoin="round"
-                      strokeLinecap="round"
-                      strokeWidth="2"
-                      stroke="#f1f1f1"
-                      d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12"
-                      id="Vector"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-              Download CV
-                
-            </button>
-            <div className="icons flex gap-6 pt-12 absolute bottom-[-20%]">
-              <FontAwesomeIcon icon={faLinkedinIn}  color="#000000" className=' transition delay-50 hover:text-[#0DB760]/70  cursor-pointer size-5' />
-              <FontAwesomeIcon icon={faInstagram}  color="#000000" className='transition delay-50 hover:text-[#0DB760] cursor-pointer size-5' />
-              <FontAwesomeIcon icon={faFacebook}  color="#000000" className='transition delay-50 hover:text-[#0DB760] cursor-pointer size-5' />
-              <FontAwesomeIcon icon={faGithub}  color="#000000" className='transition delay-50 hover:text-[#0DB760] cursor-pointer size-5' />
-            </div>
+    <section id="home" className="relative h-screen overflow-hidden bg-black">
+      {/* Background Image Slider */}
+      <div className="absolute inset-0">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            variants={imageVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            className="absolute inset-0"
+          >
+            <img
+              src={heroImages[currentSlide]}
+              alt={`Jewelry ${currentSlide + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Animated Overlays */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 0.5 }}
+          className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/90" 
+        />
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2, delay: 1 }}
+          className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10" 
+        />
+      </div>
+
+      {/* Hero Content */}
+      <div className="relative z-10 h-full flex items-center mt-8 md:mt-0">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+          <div className="flex justify-center items-center">
+            {/* Main Content - Centered */}
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className="text-center space-y-8 max-w-4xl"
+            >
+              {/* Main Heading */}
+              <div className="space-y-4">
+                <motion.h1 
+                  variants={titleVariants}
+                  className="text-5xl lg:text-8xl font-bold leading-tight text-white"
+                >
+                  <motion.span
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                  >
+                    Exquisite
+                  </motion.span>{' '}
+                  <motion.span
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                  >
+                    Jewelry
+                  </motion.span>
+                  <motion.span 
+                    variants={subtitleVariants}
+                    className="block text-4xl lg:text-6xl mt-4 font-light text-white/80"
+                  >
+                    Collection
+                  </motion.span>
+                </motion.h1>
+              </div>
+
+              {/* Description */}
+              <motion.p 
+                variants={itemVariants}
+                className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto"
+              >
+                Discover our exclusive collection of premium chains, diamond bracelets, and luxury accessories crafted with precision and passion.
+              </motion.p>
+
+              {/* Stats */}
+              <motion.div 
+                variants={statsVariants}
+                className="flex justify-center gap-12"
+              >
+                {stats.map((stat, index) => (
+                  <motion.div 
+                    key={index}
+                    variants={statItemVariants}
+                    whileHover={{ 
+                      scale: 1.1,
+                      transition: { duration: 0.2 }
+                    }}
+                    className="cursor-default"
+                  >
+                    <motion.div 
+                      className="text-2xl font-bold" 
+                      style={{ color: '#6d0e10' }}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: 0.8 + index * 0.1,
+                        type: "spring",
+                        stiffness: 200
+                      }}
+                    >
+                      {stat.value}
+                    </motion.div>
+                    <div className="text-sm text-white/60 uppercase tracking-wider">
+                      {stat.label}
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div 
+                variants={itemVariants}
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+              >
+                <motion.button 
+                  variants={buttonVariants}
+                  whileHover="hover"
+                  whileTap="tap"
+                  className="group font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-2xl flex items-center gap-2 justify-center relative overflow-hidden" 
+                  style={{ backgroundColor: '#6d0e10', color: 'white' }}
+                >
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                    initial={{ x: '-100%' }}
+                    whileHover={{ x: '100%' }}
+                    transition={{ duration: 0.6 }}
+                  />
+                  <span className="relative z-10">Explore Collection</span>
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ 
+                      duration: 2, 
+                      repeat: Infinity, 
+                      ease: "easeInOut" 
+                    }}
+                  >
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </motion.div>
+                </motion.button>
+
+                <motion.button 
+                  variants={buttonVariants}
+                  whileHover={{
+                    scale: 1.05,
+                    y: -2,
+                    backgroundColor: '#6d0e10' + '20',
+                    transition: { duration: 0.2 }
+                  }}
+                  whileTap="tap"
+                  className="group border-2 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 relative overflow-hidden" 
+                  style={{ borderColor: '#6d0e10' }}
+                >
+                  <motion.div
+                    className="absolute inset-0"
+                    style={{ backgroundColor: '#6d0e10' }}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileHover={{ 
+                      scale: 1, 
+                      opacity: 0.1,
+                      transition: { duration: 0.3 }
+                    }}
+                  />
+                  <span className="relative z-10">Custom Orders</span>
+                </motion.button>
+              </motion.div>
+            </motion.div>
           </div>
-          
-          
-        </div>
-        <div className="">
-          <Lottie animationData={Animation} loop={true} className="w-[350px] h-[350px] mx-[8%] lg:mt-8 lg:w-[500px] lg:h-[500px] lg:mx-[-10%]" />
-          {/* <img
-                        src="../images/cropped_image.png"
-                        className="h-auto object-cover mt-14 w-[370px]"
-                        alt="Profile"
-          /> */}
         </div>
       </div>
-        
-    </div>
+
+      {/* Slide Indicators */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-20"
+      >
+        {heroImages.map((_, index) => (
+          <motion.button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? 'scale-125'
+                : 'bg-white/30 hover:bg-white/50'
+            }`}
+            style={index === currentSlide ? { backgroundColor: '#6d0e10' } : {}}
+          >
+            {index === currentSlide && (
+              <motion.div
+                layoutId="activeIndicator"
+                className="w-full h-full rounded-full"
+                style={{ backgroundColor: '#6d0e10' }}
+                transition={{ type: "spring", stiffness: 400, damping: 30 }}
+              />
+            )}
+          </motion.button>
+        ))}
+      </motion.div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 2 }}
+        className="absolute bottom-8 right-8 flex flex-col items-center gap-2 text-white/60"
+      >
+        <motion.div 
+          animate={{ y: [0, -5, 0] }}
+          transition={{ 
+            duration: 2, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+          className="text-sm uppercase tracking-wider rotate-90 origin-center transform translate-y-6"
+        >
+          Scroll
+        </motion.div>
+        <motion.div 
+          animate={{ 
+            height: [48, 60, 48],
+            opacity: [0.5, 1, 0.5]
+          }}
+          transition={{ 
+            duration: 2, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+          className="w-px bg-gradient-to-b from-rose-300 to-transparent"
+        />
+      </motion.div>
+    </section>
   );
 };
 
