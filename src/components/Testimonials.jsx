@@ -77,7 +77,7 @@ const Testimonials = () => {
       location: "New York",
       content: "The craftsmanship is absolutely extraordinary. Each piece tells a story and the attention to detail is unmatched. I've never owned jewelry this beautiful.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=100&h=100&fit=crop&crop=face"
     },
     {
       id: 2,
@@ -492,7 +492,7 @@ const Testimonials = () => {
         </motion.div>
 
         {/* Stats Section */}
-        <motion.div 
+        {/* <motion.div 
           ref={statsRef}
           className="grid grid-cols-3 gap-8 mt-20"
           variants={statsVariants}
@@ -560,7 +560,7 @@ const Testimonials = () => {
             </p>
           </motion.div>
 
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Bottom accent */}

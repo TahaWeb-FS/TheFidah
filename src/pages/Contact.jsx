@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
+    <div className="min-h-screen bg-black relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-red-900/30 to-red-800/20 rounded-full blur-3xl animate-pulse"></div>
@@ -47,9 +47,9 @@ const Contact = () => {
 
       <div className="relative z-10 container mx-auto px-6 py-20">
         {/* Header */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-16 transition-all mt-20 duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-6xl md:text-8xl font-thin mb-4 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
-            FIDAH
+            Contact Us
           </h1>
           <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mx-auto mb-6"></div>
           <p className="text-xl text-gray-400 font-light">Exquisite Jewelry • Timeless Elegance</p>
@@ -82,7 +82,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
-                  <p className="text-white text-lg font-light">+1 (555) 123-4567</p>
+                  <p className="text-white text-lg font-light">+212 676-101074</p>
                 </div>
               </div>
 
@@ -92,11 +92,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Address</p>
-                  <p className="text-white text-lg font-light">123 Diamond District, NYC</p>
+                  <p className="text-white text-lg font-light">Rabat, Morocco</p>
                 </div>
               </div>
 
-              <div className="group flex items-center space-x-4 p-4 rounded-lg hover:bg-white/5 transition-all duration-300 hover:translate-x-2">
+              {/* <div className="group flex items-center space-x-4 p-4 rounded-lg hover:bg-white/5 transition-all duration-300 hover:translate-x-2">
                 <div className="w-14 h-14 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-red-600/50">
                   <Clock className="w-6 h-6 text-white" />
                 </div>
@@ -104,7 +104,7 @@ const Contact = () => {
                   <p className="text-gray-400 text-sm">Hours</p>
                   <p className="text-white text-lg font-light">Mon-Sat: 10AM-7PM</p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Social Media */}
