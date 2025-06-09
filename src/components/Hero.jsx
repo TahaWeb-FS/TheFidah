@@ -456,11 +456,11 @@ const Hero = () => {
       </motion.div>
 
       {/* Mobile Slide Indicators - Alternative position for small screens */}
-      <motion.div 
+      {/* <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1.5 }}
-        className="hidden md:flex absolute top-4 right-4 gap-2 z-20"
+        className="flex md:hidden  absolute top-4 right-4 gap-2 z-20"
       >
         {heroImages.map((_, index) => (
           <motion.button
@@ -476,7 +476,7 @@ const Hero = () => {
             style={index === currentSlide ? { backgroundColor: '#6d0e10' } : {}}
           />
         ))}
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
